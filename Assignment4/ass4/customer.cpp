@@ -24,6 +24,11 @@ string Customer::getFirstName()
     return firstName;
 }
 
+short Customer::getID()
+{
+    return customerID;
+}
+
 bool Customer::operator==(const Customer& rightHandItem) const
 {
     if (customerID == rightHandItem.customerID) {

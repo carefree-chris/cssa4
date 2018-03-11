@@ -2,8 +2,8 @@
 #define CUSTOMER_H
 
 #include <string>
-
-#include "customer.h"
+#include <utility>
+#include <list>
 
 using namespace std;
 
@@ -12,7 +12,7 @@ public:
 
     Customer(string lName, string fName, short ID);
 
-    +Customer();
+    
 
     void printHistory();
 
@@ -22,6 +22,7 @@ public:
 
     string getFirstName();
 
+    short getID();
 
     bool operator==(const Customer& rightHandItem) const;
 
@@ -33,7 +34,7 @@ private:
     string lastName;
     string firstName;
     short customerID;
-    List<Pair<bool, string>> history;
+    list<pair<bool, string>> history; //??? TODO
 
 };
 #endif // CUSTOMER_H

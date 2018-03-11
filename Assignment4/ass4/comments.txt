@@ -1,0 +1,25 @@
+Christopher Lynn
+
+
+Assumptions:
+Uses shorts for release years, and therefore assumes that this system won't
+be used for movies released after the year 32,767 AD.
+
+Ultimately, I ended up using the Second Pass of the factory pattern, parsing
+the movie data mostly in static Mediea::create function in media.cpp
+
+---------------------------------------Credit----------------------------------
+Still a little rusty on parsing strings, these are the resources I used on ass3
+when figuring out how to best get the info needed from each file line:
+http://www.cplusplus.com/articles/D9j2Nwbp/ 
+
+I used cplusplus.com quite a bit for other stuff too. Here's a few of the pages
+that I found useful.
+
+For iterators: http://www.cplusplus.com/reference/vector/vector/begin/
+
+For some basic vector stuff:
+https://stackoverflow.com/questions/11457571/how-to-set-initial-size-of-stdvector
+
+When reading up on polymorphism:
+http://www.cplusplus.com/doc/tutorial/polymorphism/

@@ -3,8 +3,10 @@
 #define TRACKINGSYSTEM_H
 
 #include "customerhashtable.h"
+#include "media.h"
 
 #include <string>
+#include <set>
 
 class TrackingSystem {
 public:
@@ -13,7 +15,7 @@ public:
 
     ~TrackingSystem();
 
-    bool readInCustomer(string filePath);
+    bool readInCustomers(string filePath);
 
     bool readInMedia(string filePath);
 
@@ -24,6 +26,7 @@ public:
     bool history(short customerID);
 private:
     CustomerHashTable customers;
+    
 
 };
 #endif // TRACKINGSYSTEM_H
