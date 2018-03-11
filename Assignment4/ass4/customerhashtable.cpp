@@ -71,5 +71,18 @@ bool CustomerHashTable::contains(short customerID)
 
 Customer* CustomerHashTable::getByID(short customerID)
 {
+    int index = (customerID) % reserveSize;
+
+    vector<Customer*>::iterator it;
+
+    it = customerBucket[index].begin();
+    while (it != customerBucket[index].end()) {
+
+        if (*it != nullptr && (*it)->getID() == customerID) {
+            return (*it);
+        }
+        ++it;
+    }
+
     return nullptr;
 }

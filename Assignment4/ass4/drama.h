@@ -12,6 +12,8 @@ public:
 
     Drama(int stock, string director, string title, short year);
 
+    string toString() const;
+
     // Sorts by director, then title
     bool operator==(const Media& rhItem) const;
 

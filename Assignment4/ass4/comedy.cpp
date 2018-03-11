@@ -8,6 +8,11 @@ Comedy::Comedy(int stock, string director, string title, short year) :
 
 }
 
+string Comedy::toString() const
+{
+    return ("Comedy: " + to_string(getStock()) + ", " + getDirector() + ", " + getTitle() + ", " + to_string(getYear()));
+}
+
 bool Comedy::operator==(const Media & rhItem) const
 {
     if (getTitle() == rhItem.getTitle() &&
@@ -21,7 +26,8 @@ bool Comedy::operator==(const Media & rhItem) const
 }
 
 bool Comedy::operator<(const Media & rhItem) const
-{
+{   
+
     if (getTitle() < rhItem.getTitle()) {
 
         return true;
@@ -43,6 +49,9 @@ bool Comedy::operator<(const Media & rhItem) const
 
 bool Comedy::operator>(const Media & rhItem) const
 {
+
+    cout << "TEST TEST TEST" << endl;
+
     if (getTitle() > rhItem.getTitle()) {
 
         return true;

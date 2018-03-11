@@ -36,6 +36,8 @@ public:
 
     short getYear() const;
 
+    virtual string toString() const;
+
     virtual bool operator==(const Media& rhItem) const;
 
     virtual bool operator<(const Media& rhItem) const;

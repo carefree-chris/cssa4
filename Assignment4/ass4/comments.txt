@@ -2,13 +2,20 @@ Christopher Lynn
 
 
 Assumptions:
-Uses shorts for release years, and therefore assumes that this system won't
+
+1. In order to meet the stock requirements for classics, I had to assume that
+a movie with the same director, title, and release date count as the same
+movie. I did not make this assumption with comedies or dramas.
+
+2. I use shorts for release years, and therefore assume that this system won't
 be used for movies released after the year 32,767 AD.
 
 Ultimately, I ended up using the Second Pass of the factory pattern, parsing
 the movie data mostly in static Mediea::create function in media.cpp
 
 ---------------------------------------Credit----------------------------------
+I reused some code from ass2. Credit to Yussuf Pisan for BinaryNode class
+
 Still a little rusty on parsing strings, these are the resources I used on ass3
 when figuring out how to best get the info needed from each file line:
 http://www.cplusplus.com/articles/D9j2Nwbp/ 

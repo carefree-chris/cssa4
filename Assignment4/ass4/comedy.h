@@ -23,6 +23,8 @@ public:
     
     Comedy(int stock, string director, string title, short year);
 
+    string toString() const;
+
     // Sorts by title, then year
     bool operator==(const Media& rhItem) const;
 

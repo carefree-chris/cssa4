@@ -6,6 +6,11 @@ Drama::Drama(int stock, string director, string title, short year) :
 
 }
 
+string Drama::toString() const
+{
+    return ("Drama: " + to_string(getStock()) + ", " + getDirector() + ", " + getTitle() + ", " + to_string(getYear()));
+}
+
 bool Drama::operator==(const Media & rhItem) const
 {
     if (getTitle() == rhItem.getTitle() &&

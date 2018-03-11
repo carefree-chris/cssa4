@@ -3,6 +3,7 @@
 
 #include "trackingsystem.h"
 #include "customer.h"
+//#include "binarynode.h"
 
 
 using namespace std;
@@ -16,6 +17,14 @@ int main()
     MediaStorageSystem.readInCustomers("data4customers.txt");
     
     MediaStorageSystem.readInMedia("data4movies.txt");
+
+    MediaStorageSystem.readInCommands("data4commands.txt");
+
+    
+
+
+    //cout << "TEST " << test.getHeight() << endl;
+
     return 0;
 }
 

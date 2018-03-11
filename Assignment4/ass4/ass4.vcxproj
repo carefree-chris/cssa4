@@ -146,7 +146,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bstree.h" />
     <ClInclude Include="classic.h" />
     <ClInclude Include="comedy.h" />
     <ClInclude Include="customer.h" />
@@ -158,7 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ass4.cpp" />
-    <ClCompile Include="bstree.cpp" />
     <ClCompile Include="classic.cpp" />
     <ClCompile Include="comedy.cpp" />
     <ClCompile Include="customer.cpp" />

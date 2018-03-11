@@ -40,7 +40,7 @@ Media * Media::create(string type, string data)
         data = data.substr(data.find(", ") + 2,
             data.length());
 
-        short year = stoi(data);
+        short year;
 
         // Movie is a comedy
         if (type == "F") {
@@ -58,14 +58,29 @@ Media * Media::create(string type, string data)
             return new Drama(stock, director, title, year);
         }
 
-
         // Movie is a classic
         if (type == "C") {
 
-            int stock = stoi(data.substr(0, data.find(",")));
+            string fName = data.substr(0, data.find(" "));
 
-            data = data.substr(data.find(", ") + 2,
+            data = data.substr(data.find(" ") + 1,
                 data.length());
+
+            string lName = data.substr(0, data.find(" "));
+
+            string majorActor = fName + " " + lName;
+
+            data = data.substr(data.find(" ") + 1,
+                data.length());
+
+            string releaseDate = data.substr(0, data.length());
+
+            data = data.substr(data.find(" ") + 1,
+                data.length());
+
+            year = stoi(data);
+
+            return new Classic(stock, director, title, year, majorActor, releaseDate);
 
         }
 
@@ -107,6 +122,12 @@ short Media::getYear() const
     return year;
 }
 
+string Media::toString() const
+{
+    return getStock() + ", " + getDirector() + ", " +
+           getTitle() + ", " + to_string(getYear());
+}
+
 bool Media::operator==(const Media& rhItem) const
 {
     if (director == rhItem.director &&
@@ -122,6 +143,7 @@ bool Media::operator==(const Media& rhItem) const
 
 bool Media::operator<(const Media& rhItem) const
 {
+
     if (title < rhItem.title) {
         return true;
     }
